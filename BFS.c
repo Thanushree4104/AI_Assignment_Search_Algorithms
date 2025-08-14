@@ -9,7 +9,6 @@ int n = 7;
 int adj[MAX][MAX];
 int visited[MAX];
 int parent[MAX];
-
 int idx(char v) {
     for (int i = 0; i < n; ++i) if (nodes[i] == v) return i;
     return -1;
