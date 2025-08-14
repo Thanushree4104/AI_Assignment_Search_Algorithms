@@ -76,13 +76,13 @@ bool dfs_hybrid(int u, int goal){
                 int t = neigh[i]; neigh[i] = neigh[j]; neigh[j] = t;
             }
 
-    // try neighbors greedily: only commit if BFS (with path nodes forbidden) can reach goal
+    // try neighbors greedily
     for(int i=0;i<cnt;i++){
         int v = neigh[i];
         if(bfs_reachable(v, goal, inPath)){
             if(dfs_hybrid(v, goal)) return true; // preemptive exit on success
         }
-        // else: skip this neighbor and try the next one
+        
     }
 
     // backtrack
@@ -105,7 +105,7 @@ int main(void){
 
     int S = idx('S'), G = idx('G');
 
-    // Run hybrid search
+
     if(!dfs_hybrid(S, G)){
         printf("No path found.\n");
     }
