@@ -5,7 +5,6 @@
 #define N 7
 #define BEAM_WIDTH 2
 
-// Node indices: S=0, A=1, B=2, C=3, D=4, E=5, G=6
 char *names[] = {"S", "A", "B", "C", "D", "E", "G"};
 int heuristic[] = {6, 7, 6, 7, 3, 4, 0};
 
