@@ -5,7 +5,6 @@
 
 // Node mapping
 enum {S, A, B, C, D, G};
-
 // Heuristic values
 int h[N] = {11, 7, 6, 11, 4, 0};
 
