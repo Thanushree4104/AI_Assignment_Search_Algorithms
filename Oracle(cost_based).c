@@ -3,9 +3,6 @@
 
 #define N 7  // Number of nodes
 
-// Map node names to indices
-// S=0, A=1, B=2, C=3, D=4, E=5, G=6
-
 int costMatrix[N][N] = {
     // S   A   B   C   D   E   G
     { 0,  4,  3,  0,  0,  0,  0}, // S
