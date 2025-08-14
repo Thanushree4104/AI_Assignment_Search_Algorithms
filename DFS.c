@@ -3,25 +3,18 @@
 #include <stdlib.h>
 
 #define MAX 20
-
-/* Graph nodes (hardcoded in desired order).
-   Order used for lexicographic neighbor sorting:
-   'S','A','B','C','D','E','G'
-*/
 char nodes[] = {'S','A','B','C','D','E','G'};
 int n = 7;
 int adj[MAX][MAX];
 int visited[MAX];
 int path[MAX], pathLen = 0;
 int found = 0;
-
-/* helper: index of a vertex label in nodes[] */
 int idx(char v) {
     for (int i = 0; i < n; ++i) if (nodes[i] == v) return i;
     return -1;
 }
 
-/* comparator for qsort on neighbor indices, by node letter */
+// comparator for qsort on neighbor indices, by node letter 
 int cmpNeighbors(const void *a, const void *b) {
     int ia = *(const int*)a;
     int ib = *(const int*)b;
